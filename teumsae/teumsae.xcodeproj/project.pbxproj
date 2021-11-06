@@ -19,7 +19,6 @@
 		A9C8AAC127359BB700168E0E /* AudioConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F41627357457007B600D /* AudioConverter.swift */; };
 		A9C8AAC227359BB900168E0E /* AudioConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F41627357457007B600D /* AudioConverter.swift */; };
 		CC9750A527360F9F005CB3E5 /* STTDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9750A427360F9F005CB3E5 /* STTDataModel.swift */; };
-		CC9750B727362609005CB3E5 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9750B627362609005CB3E5 /* PersistenceManager.swift */; };
 		CC9750CD27366612005CB3E5 /* ReviewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9750CC27366612005CB3E5 /* ReviewList.swift */; };
 		CC9750D027366F2D005CB3E5 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9750CF27366F2D005CB3E5 /* URL+Extension.swift */; };
 		CC99C5B72734FD5500996B17 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99C5B62734FD5500996B17 /* AudioPlayer.swift */; };
@@ -77,7 +76,6 @@
 		A99A30DC273638CA0048C3C5 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		CC9750A32736080A005CB3E5 /* teumsae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = teumsae.entitlements; sourceTree = "<group>"; };
 		CC9750A427360F9F005CB3E5 /* STTDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTDataModel.swift; sourceTree = "<group>"; };
-		CC9750B627362609005CB3E5 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		CC9750CC27366612005CB3E5 /* ReviewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewList.swift; sourceTree = "<group>"; };
 		CC9750CF27366F2D005CB3E5 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		CC99C5B62734FD5500996B17 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -167,14 +165,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CC9750C927366440005CB3E5 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				CC9750B627362609005CB3E5 /* PersistenceManager.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		CC9750CA273665FC005CB3E5 /* ReviewList */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +199,6 @@
 				CCE348052731884D00471492 /* Products */,
 				4C94F641FD7268527DA49547 /* Pods */,
 				A98F4617ACFC254018CC9044 /* Frameworks */,
-				CC9750C927366440005CB3E5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -582,7 +571,6 @@
 				CCE3484D27318D6F00471492 /* Date+Extension.swift in Sources */,
 				CCE3480A2731884D00471492 /* SceneDelegate.swift in Sources */,
 				CCE3484527318ADF00471492 /* NewReviewView.swift in Sources */,
-				CC9750B727362609005CB3E5 /* PersistenceManager.swift in Sources */,
 				CCB0B741273446C100CFD1B2 /* ViewRounter.swift in Sources */,
 				CCE3484F27318EA100471492 /* Recording.swift in Sources */,
 				A99A30DD273638CA0048C3C5 /* RecordingView.swift in Sources */,
