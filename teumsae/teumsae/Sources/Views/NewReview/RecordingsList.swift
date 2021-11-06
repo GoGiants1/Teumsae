@@ -10,20 +10,18 @@ import Alamofire
 
 struct RecordingsList: View {
     
-    @ObservedObject var audioRecorder: AudioRecorder
+	@ObservedObject var audioRecorder: AudioRecorder = AudioRecorder.shared
     
     var body: some View {
-        NavigationView{
-            List {
-                ForEach(audioRecorder.recordings, id: \.createdAt) {
-                    recording in
-                    NavigationLink(destination: RecordingView(recording: recording),
-                                   label: {
-                        RecordingRow(audioURL: recording.fileURL)
-                    })
-                }
-                .onDelete(perform: delete)
+        List {
+            ForEach(audioRecorder.recordings, id: \.createdAt) {
+                recording in
+                NavigationLink(destination: RecordingView(recording: recording),
+                               label: {
+                    RecordingRow(audioURL: recording.fileURL)
+                })
             }
+            .onDelete(perform: delete)
         }
     }
 
@@ -70,6 +68,6 @@ struct RecordingRow: View{
 
 struct RecordingsList_Previews: PreviewProvider {
     static var previews: some View {
-        RecordingsList(audioRecorder: AudioRecorder())
+        RecordingsList()
     }
 }
