@@ -24,7 +24,7 @@ struct RecordingView: View {
                         // navigation
                         self.audioPlayer.startPlayback(audio: self.recording.fileURL)
                     }) {
-                        Image(systemName: "play.circle")
+                        Image(systemName: "play.fill")
                             .imageScale(.large)
                     }
                 }
