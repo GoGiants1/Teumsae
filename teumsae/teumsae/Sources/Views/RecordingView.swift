@@ -13,18 +13,21 @@ struct RecordingView: View {
     @ObservedObject var audioPlayer = AudioPlayer()
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 15) {
+            VStack(alignment: .leading) {
                 Text(recording.fileName ?? "<no_name>")
-                    .font(.headline)
-                    .font(.system(size:17))
-                    .frame(width: 138, height: 23, alignment: .leading)
+//                    .font(.headline)
+                    .font(.system(size:30))
+                    .frame(height: 43, alignment: .leading)
+                    .padding(.leading, 17)
+                    //.padding(.top, 17)
                 Text("Date")
                     .font(.headline)
                     .font(.system(size:17))
-                    .frame(width: 138, height: 23, alignment: .leading)
-                Text(recording.createdAt.toString(dateFormat: "YY/MM/dd"))
+                    .frame(height: 23, alignment: .leading)
+                    .padding(.leading, 17)
+                Text(recording.createdAt.toString(dateFormat: "yyyy-MM-dd HH:mm"))
                     .font(.headline)
-                    .frame(width: 138, height: 23)
+                    .frame(height: 23)
                     //.padding(.top, 104)
                     .padding(.leading, 17)
             
@@ -35,6 +38,7 @@ struct RecordingView: View {
                     }) {
                         Image(systemName: "play.fill")
                             .imageScale(.large)
+                            .padding(.leading, 17)
                     }
                 }
                 else { // IF1-ELSE : CURRENTLY PLAYING
@@ -43,9 +47,12 @@ struct RecordingView: View {
                     }) {
                         Image(systemName: "stop.fill")
                             .imageScale(.large)
+                            .padding(.leading, 17)
                     }
                 } // END OF IF1 CLAUSE
+                Divider()
                 Text(recording.transcription ?? "<no_transcription>")
+                    .padding(.leading, 17)
             }
             .frame(
                   minWidth: 0,
