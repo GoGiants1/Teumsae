@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:teumsae/RecordingEntity+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:teumsae/RecordingEntity+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:teumsae.xcodeproj">
    </FileRef>
    <FileRef
