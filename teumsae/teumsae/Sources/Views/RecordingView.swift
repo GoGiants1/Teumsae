@@ -13,12 +13,21 @@ struct RecordingView: View {
     @ObservedObject var audioPlayer = AudioPlayer()
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                Divider()
-                    .padding(.bottom)
+            VStack(alignment: .leading, spacing: 15) {
+                Text(recording.fileName ?? "<no_name>")
+                    .font(.headline)
+                    .font(.system(size:17))
+                    .frame(width: 138, height: 23, alignment: .leading)
                 Text("Date")
                     .font(.headline)
+                    .font(.system(size:17))
+                    .frame(width: 138, height: 23, alignment: .leading)
                 Text(recording.createdAt.toString(dateFormat: "YY/MM/dd"))
+                    .font(.headline)
+                    .frame(width: 138, height: 23)
+                    //.padding(.top, 104)
+                    .padding(.leading, 17)
+            
                 if audioPlayer.isPlaying == false { // IF1 : NOT PLAYING
                     Button(action: {
                         // navigation
@@ -36,14 +45,16 @@ struct RecordingView: View {
                             .imageScale(.large)
                     }
                 } // END OF IF1 CLAUSE
-                
-//                if let transcript = recording.transcript {
-//                    Text("Transcript")
-//                        .font(.headline)
-//                        .padding(.top)
-//                    Text(transcript)
-//                }
+                Text(recording.transcription ?? "<no_transcription>")
             }
+            .frame(
+                  minWidth: 0,
+                  maxWidth: .infinity,
+                  minHeight: 0,
+                  maxHeight: .infinity,
+                  alignment: .topLeading
+                )
+            
         }
     }
 }
